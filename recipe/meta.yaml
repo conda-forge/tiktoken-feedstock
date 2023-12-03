@@ -1,5 +1,5 @@
 {% set name = "tiktoken" %}
-{% set version = "0.5.1" %}
+{% set version = "0.5.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiktoken-{{ version }}.tar.gz
-  sha256: 27e773564232004f4f810fd1f85236673ec3a56ed7f1206fc9ed8670ebedb97a
+  sha256: f54c581f134a8ea96ce2023ab221d4d4d81ab614efa0b2fbce926387deb56c80
 
 build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   build:
