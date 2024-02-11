@@ -1,5 +1,5 @@
 {% set name = "tiktoken" %}
-{% set version = "0.5.2" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiktoken-{{ version }}.tar.gz
-  sha256: f54c581f134a8ea96ce2023ab221d4d4d81ab614efa0b2fbce926387deb56c80
+  sha256: ace62a4ede83c75b0374a2ddfa4b76903cf483e9cb06247f566be3bf14e6beed
 
 build:
   script:
