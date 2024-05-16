@@ -1,5 +1,5 @@
 {% set name = "tiktoken" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tiktoken-{{ version }}.tar.gz
-  sha256: ace62a4ede83c75b0374a2ddfa4b76903cf483e9cb06247f566be3bf14e6beed
+  sha256: 1077266e949c24e0291f6c350433c6f0971365ece2b173a23bc3b9f9defef6b6
 
 build:
   script:
@@ -20,6 +20,7 @@ requirements:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
     - {{ compiler('cxx') }}
+    - {{ stdlib("c") }}
     - {{ compiler('rust') }}
     - cargo-bundle-licenses
   host:
