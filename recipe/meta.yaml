@@ -13,7 +13,7 @@ build:
   script:
     - cargo-bundle-licenses --format yaml --output THIRDPARTY.yml
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -45,6 +45,7 @@ test:
 
 about:
   home: https://github.com/openai/tiktoken
+  dev_url: https://github.com/openai/tiktoken
   summary: tiktoken is a fast BPE tokeniser for use with OpenAI's models
   license: MIT
   license_file:
