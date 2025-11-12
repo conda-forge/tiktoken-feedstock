@@ -9,6 +9,8 @@ Package license: MIT
 
 Summary: tiktoken is a fast BPE tokeniser for use with OpenAI's models
 
+Development: https://github.com/openai/tiktoken
+
 Current build status
 ====================
 
